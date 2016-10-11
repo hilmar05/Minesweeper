@@ -15,42 +15,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-
-        BorderPane mainWindow = new BorderPane();
-        Scene mainScene = new Scene(mainWindow,500,500);
-        primaryStage.setScene(mainScene);
-        primaryStage.setTitle("Minesweeper");
-
-
-        PlayField playField = new PlayField();
-        mainWindow.setCenter(playField);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        Settings settingsWindow = new Settings(primaryStage);
-        settingsWindow.showAndWait();
-        primaryStage.show();
-
-
+        FXMLLoader.load(getClass().getResource("sample.fxml"));
     }
 
 
     public static void main(String[] args) {
-
         launch(args);
     }
 }
